@@ -2688,11 +2688,6 @@ const docsSideNav = [
         items: [
           {
             type: 'doc',
-            route: '/docs/alerts-management/troubleshooting/troubleshooting',
-            label: 'Troubleshooting',
-          },
-          {
-            type: 'doc',
             route: '/docs/alerts-management/troubleshooting/missing-alerts-in-signoz',
             label: 'Missing Alerts',
           },

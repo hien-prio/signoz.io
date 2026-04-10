@@ -2544,7 +2544,7 @@ const docsSideNav = [
     label: 'Alerts',
     type: 'category',
     isExpanded: false,
-    route: '/docs/alerts',
+    route: '/docs/alerts-management/overview',
     items: [
       {
         type: 'doc',

@@ -91,6 +91,16 @@ module.exports = () => {
     async redirects() {
       return [
         {
+          source: '/docs/alerts-management/overview',
+          destination: '/docs/alerts/',
+          permanent: true,
+        },
+        {
+          source: '/docs/alerts-management/overview/',
+          destination: '/docs/alerts/',
+          permanent: true,
+        },
+        {
           source: '/docs/operate/migration/upgrade-0.113/',
           destination: '/docs/operate/migration/upgrade-0-113/',
           permanent: true,
@@ -1839,8 +1849,7 @@ module.exports = () => {
         {
           source:
             '/docs/manage/administrator-guide/clickhouse/distributed-clickhouse/docker/data/clickhouse',
-          destination:
-            '/docs/manage/administrator-guide/clickhouse/distributed-clickhouse/docker/',
+          destination: '/docs/manage/administrator-guide/clickhouse/distributed-clickhouse/docker/',
           permanent: true,
         },
         {
@@ -2196,8 +2205,7 @@ module.exports = () => {
         {
           source:
             '/docs/manage/administrator-guide/clickhouse/distributed-clickhouse/docker/data/zookeeper/',
-          destination:
-            '/docs/manage/administrator-guide/clickhouse/distributed-clickhouse/docker/',
+          destination: '/docs/manage/administrator-guide/clickhouse/distributed-clickhouse/docker/',
           permanent: true,
         },
         {

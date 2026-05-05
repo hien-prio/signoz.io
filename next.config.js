@@ -91,6 +91,16 @@ module.exports = () => {
     async redirects() {
       return [
         {
+          source: '/docs/product-features/alert-management',
+          destination: '/docs/alerts/',
+          permanent: true,
+        },
+        {
+          source: '/docs/product-features/alert-management/',
+          destination: '/docs/alerts/',
+          permanent: true,
+        },
+        {
           source: '/enterprise-self-hosted/',
           destination: '/contact-us/?source=redirect-enterprise-self-hosted',
           permanent: true,

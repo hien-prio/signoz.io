@@ -123,11 +123,27 @@ In this step, you configure how alert notifications are delivered:
 ### Notification Message
 Custom message content for alert notifications. Use template variables to include dynamic information. The default template includes the current value and threshold.
 
-You can incorporate result attributes in the alert message to make notifications more informative:
+### Alert Name
+A field to name the alert for easy identification.
 
-**Syntax**: Use `$<attribute-name>` to insert attribute values. Attribute values can be any attribute used in group by.
+### Alert Description
 
-**Example**: If you have a query that has the attribute `service.name` in the group by clause then to use it in the notification message, you will use `$service.name`.
+Add a detailed description for the alert, explaining its purpose and trigger conditions.
+
+You can incorporate template variables in the alert descriptions to make the alerts more informative:
+
+| Variable | Description |
+| --- | --- |
+| `{{$value}}` | The current aggregated value that triggered the alert |
+| `{{$threshold}}` | The threshold value that was breached |
+| `$<attribute-name>` | Any attribute used in the Group By clause (e.g., `$service.name`) |
+
+**Example**: If you have a query grouped by `service.name` with a threshold of 100, you could write:
+`Log count for $service.name is {{$value}} (threshold: {{$threshold}})`
+
+#### Related Logs Link
+
+Log-based alert notifications include a **Related Logs** link that opens the Logs Explorer filtered to the relevant time range and query filters from the alert definition. Use this to view the actual log messages that contributed to the alert.
 
 Using <a href="https://api.slack.com/reference/surfaces/formatting#advanced" target="_blank" rel="noopener noreferrer nofollow">advanced Slack formatting</a> is supported if you are using Slack as a notification channel.
 

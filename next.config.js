@@ -91,6 +91,21 @@ module.exports = () => {
     async redirects() {
       return [
         {
+          source: '/enterprise-self-hosted/',
+          destination: '/contact-us/?source=redirect-enterprise-self-hosted',
+          permanent: true,
+        },
+        {
+          source: '/enterprise-cloud/',
+          destination: '/contact-us/?source=redirect-enterprise-cloud',
+          permanent: true,
+        },
+        {
+          source: '/oss-to-cloud/',
+          destination: '/teams/',
+          permanent: true,
+        },
+        {
           source: '/docs/alerts-management/overview',
           destination: '/docs/alerts/',
           permanent: true,
@@ -2598,6 +2613,11 @@ module.exports = () => {
         {
           source: '/blog/claude-code-opentelemetry-monitoring/',
           destination: '/blog/claude-code-monitoring-with-opentelemetry/',
+          permanent: true,
+        },
+        {
+          source: '/blog/opentelemetry-collector-processors/',
+          destination: '/blog/opentelemetry-processors/',
           permanent: true,
         },
         {

@@ -128,7 +128,11 @@ Under the **Advanced Options** section, you can configure:
 
 - **Alert when data stops coming**: Send a notification if no data is received for a specified time period. Useful for services where consistent data is expected.
 
-- **Minimum data required**: Only trigger the alert when there are enough data points to make a reliable decision. Helps avoid false alerts due to missing or sparse data.
+### Minimum Data Points in Result Group
+   - Ensures the alert condition is evaluated only when there's enough data for statistical significance.
+   - Helps avoid false alerts due to missing or sparse data points.
+   - When the number of data points in the evaluation window is below this minimum, the alert evaluation is skipped and the alert transitions to the **resolved** state. If the data point count fluctuates around the configured minimum, this can cause repeated resolve → fire cycles (alert flapping).
+   - To avoid flapping, set this value with some margin below the number of data points you expect in the evaluation window. For example, if your collection interval is 1 minute and your evaluation window is 5 minutes, you expect ~5 data points — set the minimum to `3` rather than `5` so the query must return at least 3 data points for the alert to be evaluated.
 
 <figure data-zoomable align='center'>
     <img src="/img/docs/alerts/alerts-metrics-based-2.webp" alt="Set alert conditions with threshold, routing policies, and advanced options"/>

@@ -3,7 +3,7 @@ id: opentelemetry-statsd
 title: Send StatsD Metrics to SigNoz using OpenTelemetry Collector
 description: Learn how to configure the OpenTelemetry Collector to receive and forward StatsD metrics to SigNoz.
 doc_type: howto
-date: 2026-03-09
+date: 2026-05-08
 ---
 
 import GetHelp from '@/components/shared/get-help.md'
@@ -103,7 +103,7 @@ service:
 
 Depending on how you deploy the OpenTelemetry Collector, you need to ensure the StatsD UDP port (`8125`) is accessible to your applications.
 
-<Tabs>
+<Tabs entityName="environment">
 <TabItem value="vm" label="VM" default>
 
 <KeyPointCallout title="What classifies as VM?" defaultCollapsed={true}>

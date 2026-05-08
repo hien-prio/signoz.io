@@ -1,5 +1,5 @@
 ---
-date: 2026-03-24
+date: 2026-05-08
 id: migrate-from-signoz-self-host-to-signoz-cloud
 title: Migrate from Self-Hosted SigNoz to SigNoz Cloud
 description: Step-by-step guide to migrate your observability setup from self-hosted SigNoz to SigNoz Cloud, including telemetry pipelines, dashboards, alerts, and pipelines.
@@ -106,7 +106,7 @@ For language-specific configuration, see the [instrumentation guides](https://si
 
 Deploying a dedicated collector gives you more control over data processing, batching, and routing.
 
-<Tabs>
+<Tabs entityName="environment">
 <TabItem value="k8s" label="Kubernetes">
 
 Follow the [Kubernetes OTel Collector guide](https://signoz.io/docs/tutorial/kubernetes-infra-metrics/) to deploy a collector in your cluster. Configure the exporter to send to SigNoz Cloud:
